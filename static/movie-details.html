@@ -1,0 +1,12 @@
+<div>
+    <h1>{{.Title}}</h1>
+    <p><strong>Year:</strong> {{.Year}}</p>
+    <p><strong>Genre:</strong> {{.Genre}}</p>
+    <p><strong>Director:</strong> {{.Director}}</p>
+    <p><strong>Actors:</strong></p>
+    <ul>
+        {{range .Actors}}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+</div>

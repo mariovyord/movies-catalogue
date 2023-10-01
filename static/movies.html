@@ -1,0 +1,13 @@
+    <h1>Movies</h1>
+    <ul class="list-group" id="film-list">
+       {{ range .Films }}
+            {{ block "film-list-element" .}}
+                <li class="list-group-item" id="movie-{{.Id}}">
+                    <a class="btn btn-link" href="/details/{{ .Id }}">{{ .Title }} - {{ .Director }}</a>
+                    <button hx-delete="/details/{{ .Id }}" hx-target="#movie-{{.Id}}" hx-swap="outerHTML" type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                </li>
+            {{ end }}
+       {{ end}}
+    </ul>
+
+
